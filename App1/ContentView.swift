@@ -23,7 +23,7 @@ struct ContentView: View {
                     .textFieldStyle(.roundedBorder)
                     .padding()
                     .navigationTitle("Заметки")
-
+                // Add new notes
                 Button(action: {
                     self.isExist.toggle()
                     if self.isExist {
@@ -33,6 +33,7 @@ struct ContentView: View {
                     Image(systemName: "plus.app.fill")
                 })
                 Divider()
+                // Clear all notes
                 Button(action: {
                     self.userCurrentTaskDelete.toggle()
                     if self.userCurrentTaskDelete && !self.homeTasks.isEmpty{
@@ -48,6 +49,7 @@ struct ContentView: View {
                 .padding()
                 Divider()
                 Spacer()
+                // Show all current notes
                 if !self.homeTasks.isEmpty && self.showAllTasks {
                     Spacer()
                     Text("Текущее заметки:")
